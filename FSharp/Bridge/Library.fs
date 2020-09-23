@@ -1,5 +1,6 @@
 ﻿namespace Bridge
 
-module Say =
-    let hello name =
-        printfn "Hello %s" name
+module Library = 
+
+    let x = printfn "Hello, World!"
+    
