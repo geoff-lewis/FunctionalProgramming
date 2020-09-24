@@ -23,10 +23,13 @@ module HandFunctions =
         match cards |> Array.distinct  with
         | distinctCards when Array.length distinctCards = Array.length cards -> true
         | _ -> false
-        
+
+    let cardsAreAllDifferentWithArrayEquality (cards : Card[]) =
+        match cards |> Array.distinct with
+        | distinctCards when distinctCards =  cards -> true
+        | _ -> false        
 
     let validateHand (hand : Hand) =
         match hand.Cards with
         | cards when cards.Length = 13 -> listIsDistinct cards
         | _  -> false
-

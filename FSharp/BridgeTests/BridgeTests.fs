@@ -59,7 +59,7 @@ module BridgeTests =
 
     [<Test>]
     let validateHand_GivenHandWithThirteenCardsThatAreAllDifferent_ReturnsTrue () =
-        let thirteenCardHandWithDuplicates = { Cards = [ {Pip = Two; Suit = Spades}; 
+        let thirteenCardHandWithoutDuplicates = { Cards = [ {Pip = Two; Suit = Spades}; 
                                             {Pip = Three; Suit = Spades};
                                             {Pip = Four; Suit = Spades}; 
                                             {Pip = Five; Suit = Spades};
@@ -73,4 +73,4 @@ module BridgeTests =
                                             {Pip = King; Suit = Spades};
                                             {Pip = Ace; Suit = Spades};
                                             ]}
-        Assert.That(validateHand thirteenCardHandWithDuplicates, Is.True)
+        Assert.That(validateHand thirteenCardHandWithoutDuplicates, Is.True)
